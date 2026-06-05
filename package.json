@@ -1,0 +1,30 @@
+{
+  "name": "@freeagentstore/language-detector",
+  "version": "1.0.0",
+  "description": "Detect the language of any text. Character n-gram frequency analysis evolved from Wikipedia corpora. 50 languages, 95%+ accuracy on 20+ chars.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["freeagentstore", "ai", "browser", "heuristic"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAgentStore/language-detector.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
